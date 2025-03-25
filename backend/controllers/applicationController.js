@@ -4,17 +4,17 @@ import { Application } from "../models/applicationSchema.js";
 import { Job } from "../models/jobSchema.js";
 import cloudinary from "cloudinary"
 
-// cloudinary.v2.config({
-//   cloud_name: "diyuxn0ik",
-//   api_key: "712983282771923",
-//   api_secret: "sz6MvqBsKL-_FGCRFvVY-Kv3msg"
-// });
-
-cloudinary.config({
-  cloud_name: "dwl8hquad",
-  api_key: "456925194894966",
-  api_secret: "Bk-tbvC4uTYoNpP3Bk_VCFGkaM4"
+cloudinary.v2.config({
+  cloud_name: "diyuxn0ik",
+  api_key: "712983282771923",
+  api_secret: "sz6MvqBsKL-_FGCRFvVY-Kv3msg"
 });
+
+// cloudinary.v2.config({
+//   cloud_name: "dwl8hquad",
+//   api_key: "456925194894966",
+//   api_secret: "Bk-tbvC4uTYoNpP3Bk_VCFGkaM4"
+// });
 
 export const postApplication = catchAsyncErrors(async (req, res, next) => {
   const { role } = req.user;
